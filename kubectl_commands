@@ -1,0 +1,40 @@
+Basic kubectl Commands
+###########################
+
+Cluster Information
+###################
+Check cluster info: kubectl cluster-info
+List nodes: kubectl get nodes
+
+Pods
+####
+
+List all pods: kubectl get pods
+Describe a pod: kubectl describe pod <pod-name>
+Create a pod: kubectl apply -f pod.yaml
+Delete a pod: kubectl delete pod <pod-name>
+View pod logs: kubectl logs <pod-name>
+Access pod shell: kubectl exec -it <pod-name> -- /bin/bash
+
+Deployments
+###########
+
+List deployments: kubectl get deployments
+Create/update deployment: kubectl apply -f deployment.yaml
+Delete a deployment: kubectl delete deployment <deployment-name>
+Scale a deployment: kubectl scale deployment <deployment-name> --replicas=<num>
+View rollout status: kubectl rollout status deployment/<deployment-name>
+Undo a rollout: kubectl rollout undo deployment/<deployment-name>
+
+Services
+########
+
+List services: kubectl get services
+Create a service: kubectl apply -f service.yaml
+Delete a service: kubectl delete service <service-name>
+
+Other Resources
+###############
+
+List all resources: kubectl get all
+Delete all resources from a file: kubectl delete -f <file.yaml>
